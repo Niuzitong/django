@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+DEFAULT_CHARSET = 'utf-8'
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'mblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mblog',
+        'NAME': 'mblog2',
         'USER': 'niuzitong',
         'PASSWORD': '123456',
         'HOST': '120.77.208.196',
@@ -111,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'zh-CN'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'Asia/Beijing'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
